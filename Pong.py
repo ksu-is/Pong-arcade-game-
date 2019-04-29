@@ -4,7 +4,7 @@ import turtle
 
 wn = turtle.Screen()
 wn.title("Flashback Pong")
-wn.bgcolor("black")
+wn.bgcolor("white")
 wn.setup(width=800, height=600)
 wn.tracer(0)
 
@@ -16,25 +16,25 @@ score_b = 0
 paddle_a = turtle.Turtle()
 paddle_a.speed(0)
 paddle_a.shape("square")
-paddle_a.color("yellow")
+paddle_a.color("blue") #changed paddle A to blue
 paddle_a.shapesize(stretch_wid=5,stretch_len=1)
 paddle_a.penup()
-paddle_a.goto(-350, 0)
+paddle_a.goto(-350, 0) #paddle A location
 
-# Paddle B
+# Paddle B (The paddle we are changing to the bottom of screen)
 paddle_b = turtle.Turtle()
 paddle_b.speed(0)
 paddle_b.shape("square")
-paddle_b.color("yellow")
-paddle_b.shapesize(stretch_wid=5,stretch_len=1)
+paddle_b.color("red") #changed paddle B to red
+paddle_b.shapesize(stretch_wid=1,stretch_len=5)
 paddle_b.penup()
-paddle_b.goto(350, 0)
+paddle_b.goto(0, -200) #location of paddle B
 
 # Ball
 ball = turtle.Turtle()
 ball.speed(0)
 ball.shape("square")
-ball.color("blue")
+ball.color("black") #changed ball color to black
 ball.penup()
 ball.goto(0, 0)
 ball.dx = 2
@@ -48,7 +48,7 @@ pen.color("black")
 pen.penup()
 pen.hideturtle()
 pen.goto(0, 260)
-pen.write("Player A: 0  Player B: 0", align="center", font=("Courier", 24, "normal"))
+pen.write("Player A: 0  Player B: 0", align="center", font=("Courier", 24, "normal")) #code for title and scoreboard
 
 # Function
 def paddle_a_up():
@@ -62,14 +62,15 @@ def paddle_a_down():
     paddle_a.sety(y)
 
 def paddle_b_up():
-    y = paddle_b.ycor()
-    y += 20
-    paddle_b.sety(y)
+  y = paddle_b.ycor()
+  y += 20
+  paddle_b.sety(y)
 
 def paddle_b_down():
-    y = paddle_b.ycor()
-    y -= 20
-    paddle_b.sety(y)
+   y = paddle_b.ycor()
+   y -= 20
+   paddle_b.sety(y)
+
 
 # Keyboard binding
 wn.listen()
@@ -117,4 +118,3 @@ while True:
             
     elif ball.xcor() > 340 and ball.ycor() < paddle_b.ycor() + 50 and ball.ycor() > paddle_b.ycor() - 50:
         ball.dx *= -1
-        
