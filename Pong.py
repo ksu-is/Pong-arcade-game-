@@ -3,7 +3,7 @@
 import turtle
 
 screen = turtle.Screen()
-screen.title("Flashback Pong")
+screen.title("Paddle Arcade")
 screen.bgcolor("white")
 screen.setup(width=800, height=600)
 screen.tracer(0)
