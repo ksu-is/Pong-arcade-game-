@@ -27,8 +27,8 @@ ball.shape("square")
 ball.color("black") #changed ball color to black
 ball.penup()
 ball.goto(0, 200)
-ball.dx = 3.5
-ball.dy = 3.5
+ball.dx = 5
+ball.dy = 5
 
 # Pen
 pen = turtle.Turtle()
@@ -83,14 +83,6 @@ while True:
         ball.setx(-400)
         ball.dx *= -1
 
-
-    # if ball.ycor() <- 250:
-    #     score_b += 1
-    #     pen.clear()
-    #     pen.write("Score: {}".format(score_b), align="center", font=("Courier", 24, "normal"))
-    #     ball.goto(0,0)
-    #     ball.dx *= -1
-
     #Paddle and ball collisions 
     if  ball.ycor() < -190 and ball.xcor() < paddle_b.xcor() + 50 and ball.xcor() > paddle_b.xcor() - 50:
         ball.sety(-190)
@@ -98,3 +90,7 @@ while True:
         score_b += 1
         pen.clear()
         pen.write("Score: {}".format(score_b), align="center", font=("Courier", 24, "normal"))
+
+    elif ball.ycor() < -205: #endgame
+        pen.clear()
+        pen.write("GAME OVER! Restart Terminal! Final Score: {}".format(score_b), align="center", font=("Courier", 24, "normal"))
