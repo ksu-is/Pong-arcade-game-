@@ -84,13 +84,17 @@ while True:
         ball.dx *= -1
 
 
-    if ball.ycor() <- 250:
-        score_b += 1
-        pen.clear()
-        pen.write("Score: {}".format(score_b), align="center", font=("Courier", 24, "normal"))
-        ball.goto(0,0)
-        ball.dx *= -1
+    # if ball.ycor() <- 250:
+    #     score_b += 1
+    #     pen.clear()
+    #     pen.write("Score: {}".format(score_b), align="center", font=("Courier", 24, "normal"))
+    #     ball.goto(0,0)
+    #     ball.dx *= -1
+
     #Paddle and ball collisions 
     if  ball.ycor() < -190 and ball.xcor() < paddle_b.xcor() + 50 and ball.xcor() > paddle_b.xcor() - 50:
         ball.sety(-190)
         ball.dy *= -1
+        score_b += 1
+        pen.clear()
+        pen.write("Score: {}".format(score_b), align="center", font=("Courier", 24, "normal"))
