@@ -3,7 +3,7 @@
 import turtle
 
 screen = turtle.Screen()
-screen.title("Paddle Arcade")
+screen.title("Flashback Pong")
 screen.bgcolor("white")
 screen.setup(width=800, height=600)
 screen.tracer(0)
@@ -134,7 +134,7 @@ while True:
     #     ball.goto(0, 0)
     #     ball.dx *= -1
 
-    if ball.ycor() <- 220:
+    if ball.ycor() <- 250:
         score_b += 1
         pen.clear()
         pen.write("Score: {}".format(score_b), align="center", font=("Courier", 24, "normal"))
@@ -149,6 +149,8 @@ while True:
     #     ball.dx *= -1
     
     #Paddle and ball collisions for paddle B
-        if ball.ycor() < -190 and ball.xcor() < (paddle_b.xcor() + 50) and ball.xcor() > (paddle_b.xcor() - 50):
-            ball.dy *= -1
-            score_b +=1
+        #if ball.ycor() < -180 and ball.xcor() < paddle_b.xcor() + 50 and ball.xcor() > paddle_b.xcor() - 50:
+         #
+    if  ball.ycor() < -190 and ball.xcor() < paddle_b.xcor() + 50 and ball.xcor() > paddle_b.xcor() - 50:
+        ball.sety(-190)
+        ball.dy *= 1
