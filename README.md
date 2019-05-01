@@ -13,3 +13,6 @@ Changed the desginated keys for movement of the paddle
 Pong.py is created to be a single player game type that allows users the chance to reach high scores and compete against others.  Users will be prompted to restart the code when the game is finished and the final score will display. 
 
 ^Revised and added more details 05/01/19
+
+Credits: jcruse2
+Disclaimer: School project, not used for profit
