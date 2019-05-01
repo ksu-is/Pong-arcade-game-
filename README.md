@@ -16,3 +16,4 @@ Pong.py is created to be a single player game type that allows users the chance 
 
 Credits: jcruse2
 Disclaimer: School project, not used for profit
+https://github.com/ksu-is/Pong-Game-JC/blob/master/Pong.py
